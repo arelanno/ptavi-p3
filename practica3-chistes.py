@@ -37,11 +37,14 @@ class ChistesHandler(ContentHandler):
         Método que se llama al cerrar una etiqueta
         """
         if name == 'pregunta':
+            print("Pregunta:", self.pregunta)
             self.pregunta = ""
             self.inPregunta = False
         if name == 'respuesta':
+            print("Respuesta:", self.respuesta)
             self.respuesta = ""
             self.inRespuesta = False
+            print("Calificacion:", self.calificacion)
 
     def characters(self, char):
         """
